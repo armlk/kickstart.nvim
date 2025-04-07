@@ -114,6 +114,10 @@ vim.keymap.set('i', 'jk', '<esc>')
 -- CTRL+S to save
 vim.keymap.set('n', '<C-s>', ':w<CR>')
 
+-- Consistent 2-space indentation
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -604,6 +608,11 @@ require('lazy').setup({
             Lua = {
               completion = {
                 callSnippet = 'Replace',
+              },
+              workspace = {
+                library = {
+                  '${3rd}/love2d/library',
+                },
               },
               -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
               -- diagnostics = { disable = { 'missing-fields' } },
