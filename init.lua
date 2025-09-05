@@ -114,9 +114,11 @@ vim.keymap.set('i', 'jk', '<esc>')
 -- CTRL+S to save
 vim.keymap.set('n', '<C-s>', ':w<CR>')
 
--- Consistent 2-space indentation
-vim.opt.shiftwidth = 2
-vim.opt.tabstop = 2
+-- Consistent 4-space indentation
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.autoindent = true
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
